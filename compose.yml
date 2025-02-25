@@ -1,0 +1,10 @@
+services:
+  rust-hello-world:
+    image: rust
+    container_name: rust-hello-world
+    volumes:
+      - .:/workspace
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:8080"
