@@ -1,28 +1,29 @@
-# Foobar
+# Rust basic repository
 
-Foobar is a Python library for dealing with word pluralization.
+This is a really basic rust repo to compile a "Hello fede" app
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Create the container and login into it to compile the project:
+
 
 ```bash
-pip install foobar
+
+docker compose up -d
+docker exec -it rust-hello-world bash
+
 ```
 
 ## Usage
 
-```python
-import foobar
+Compile and run the project:
 
-# returns 'words'
-foobar.pluralize('word')
+```bash
 
-# returns 'geese'
-foobar.pluralize('goose')
+cd /workspace
+cargo build
+target/debug/hello_bbb
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 ```
 
 ## Contributing
